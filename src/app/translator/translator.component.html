@@ -1,0 +1,34 @@
+<div class="row g-3">
+    <div class="col-md-3 text-start p-0" style="width: calc(50% - 30px)">
+        <div class="form-group">
+            <strong>{{label}}</strong>
+            <textarea [(ngModel)]="input" (ngModelChange)="typing()" class="form-control"
+                id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col-sm-2  text-center" style="width: 60px">
+        <button class="btn p-0" (click)="change()"><i class="fa fa-arrows-h "></i></button>
+    </div>
+    <div class="col-md-3 text-start p-0" style="width: calc(50% - 30px)">
+        <div class="form-group">
+            <strong>{{label2}}</strong>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly>{{output}}</textarea>
+        </div>
+    </div>
+</div>
+<div *ngIf="sound" class="text-end">
+    <button class="btn" (click)="playSound()"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+</div>
+<!-- https://quicksounds.com/uploads/tracks/571186210_1916617881_2061640793.mp3 -->
+<div *ngIf="showOthers" class="row g-3 mt-5 text-start">
+    <strong>Übersetzungen von {{input}} :</strong>
+    <ul class="list-group text-start">
+        <li class="list-group-item">Alles Gute zum Geburtstag Vogel</li>
+        <li class="list-group-item">Falls du jetzt irgendwann die Heilung für Krebs findest</li>
+        <li class="list-group-item">Weißt du was du tun musst</li>
+        <li class="list-group-item">Viel Spaß am 18.03.2025</li>
+        <li class="list-group-item">Dein Ben</li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item">Ich bin ein Topf</li>
+    </ul>
+</div>
